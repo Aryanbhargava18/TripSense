@@ -68,6 +68,12 @@ async def health() -> dict:
     return {"ok": True, "service": "MirrorMind API"}
 
 
+@app.get("/api/metrics")
+async def metrics() -> dict:
+    """Aggregate performance metrics across all requests."""
+    return react_loop.metrics.get_aggregates()
+
+
 @app.post("/api/debate/{domain}")
 async def debate(domain: str, request: AnalyzeRequest):
     """Stream the multi-agent analysis pipeline via SSE."""
