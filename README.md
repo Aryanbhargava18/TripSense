@@ -46,7 +46,7 @@ MirrorMind is a multi-agent cognitive bias detector. Users describe their reason
 
 - **Frontend:** React 18 + Vite + Tailwind CSS
 - **Backend:** FastAPI + Python 3.11+
-- **LLM:** Google Gemini (via `google-generativeai`)
+- **LLM:** Groq (via `groq` Python client) for ultra-fast Llama-3 inference
 - **Streaming:** Server-Sent Events (SSE)
 - **Styling:** Custom design system (Fraunces + DM Sans typography, glassmorphism, micro-animations)
 
@@ -56,14 +56,14 @@ MirrorMind is a multi-agent cognitive bias detector. Users describe their reason
 
 - Node.js 18+
 - Python 3.11+
-- A Google Gemini API key
+- A Groq API key
 
 ### Setup
 
 ```bash
 # Clone
-git clone https://github.com/your-username/mirrormind.git
-cd mirrormind
+git clone https://github.com/Aryanbhargava18/MirrorMind.git
+cd MirrorMind
 
 # Frontend
 npm install
@@ -76,7 +76,7 @@ pip install -r requirements.txt
 
 # Environment
 cp .env.example .env
-# Add your GEMINI_API_KEY to .env
+# Add your GROQ_API_KEY to .env
 ```
 
 ### Run
